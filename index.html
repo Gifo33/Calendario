@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Scolastico 2025-2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Calendario Scolastico 2025-2026</h1>
+            <p class="subtitle">Dal 12 settembre 2025 all'8 giugno 2026</p>
+            
+            <!-- Countdown Box Prominente -->
+            <div class="countdown-box">
+                <div class="countdown-content">
+                    <div class="countdown-label">Countdown Fine Anno Scolastico</div>
+                    <div class="countdown-display" id="countdownDisplay">
+                        <span class="countdown-number" id="daysRemaining">0</span>
+                        <span class="countdown-text" id="countdownText">giorni alla fine dell'anno scolastico</span>
+                    </div>
+                    <div class="countdown-target">Termine: 8 giugno 2026</div>
+                </div>
+            </div>
+            
+            <button class="btn btn--primary" id="updateTodayBtn">Aggiorna Oggi</button>
+        </header>
+
+        <div class="calendar-wrapper">
+            <div class="calendar-header">
+                <button class="btn btn--outline" id="prevMonth">‹</button>
+                <h2 id="currentMonth">Settembre 2025</h2>
+                <button class="btn btn--outline" id="nextMonth">›</button>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="weekday-header">Lun</div>
+                <div class="weekday-header">Mar</div>
+                <div class="weekday-header">Mer</div>
+                <div class="weekday-header">Gio</div>
+                <div class="weekday-header">Ven</div>
+                <div class="weekday-header">Sab</div>
+                <div class="weekday-header">Dom</div>
+                <!-- Calendar days will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="legend card">
+                <h3>Legenda</h3>
+                <div class="legend-item">
+                    <span class="legend-color day-normal"></span>
+                    <span>Giorni di lezione</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color day-holiday"></span>
+                    <span>Interruzioni scolastiche</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color day-weekend"></span>
+                    <span>Weekend</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color day-passed"></span>
+                    <span>Giorni trascorsi</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color day-today"></span>
+                    <span>Oggi</span>
+                </div>
+            </div>
+
+            <div class="holidays-list card">
+                <h3>Interruzioni Scolastiche</h3>
+                <ul id="holidaysList">
+                    <!-- Holidays will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
